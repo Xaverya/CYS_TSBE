@@ -1,7 +1,8 @@
 cd /home/vmadmin/Pentesting
 nmap -sS -iL targets.txt -p- -oA nmap_TCP_scan
 xsltproc -o nmap_TCP_scan.html /usr/share/nmap/nmap.xsl nmap_TCP_scan.xml
-nmap -sV -iL targets.txt -oA nmap_TCP_vuln --script nmap_TCP_vuln
+nmap -sV -vv -oA nmap_TCP_vuln --script nmap_TCP_vuln -iL targets.txt
+
 
 searchsploit --nmap nmap_TCP_vuln.xml
 searchsploit --nmap nmap_TCP_scan.xml
