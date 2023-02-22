@@ -1,0 +1,4 @@
+cd /home/vmadmin
+mkdir Pentesting && cd Pentesting
+sudo su
+nmap -sn 192.168.110.0/24 -oG - |grep Up | awk '{print $2}' > targets.txt
