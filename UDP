@@ -1,0 +1,2 @@
+nmap -sU -iL targets.txt  --max-parallelism 64  -vv --version-intensity 0 -oA nmap_UDPvi_scan
+xsltproc -o nmap_UDPvi_scan.html /usr/share/nmap/nmap.xsl nmap_UDPvi_scan.xml
